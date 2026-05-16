@@ -87,13 +87,12 @@ PORT=5000
 ```bash
 cd ../frontend
 npm install
+cp .env.example .env
+# set VITE_EC2_PUBLIC_IPV4 in .env
 npm run build
 ```
 
-This creates a `build/` folder.
-
----
-
+This creates a `dist/` folder.
 
 ## Step 7: Run Application
 
