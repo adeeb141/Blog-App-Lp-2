@@ -1,14 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import axios from 'axios'
 import App from './App'
 import { AuthProvider } from './context/AuthContext'
+import { getApiBaseUrl } from './apiConfig'
 import './index.css'
+
+axios.defaults.baseURL = getApiBaseUrl()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <AuthProvider>
       <App />
     </AuthProvider>
-  </BrowserRouter>
-)
+  </BrowserRouter>)
